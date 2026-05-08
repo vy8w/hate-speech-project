@@ -25,7 +25,7 @@ train_df["label"] = train_df["hate"].apply(map_label)
 dev_df["label"] = dev_df["hate"].apply(map_label)
 
 # 필요한 컬럼만 선택
-use_cols = ["comments", "title", "hate", "label"]
+use_cols = ["comments", "hate", "label"]
 train_df = train_df[use_cols].copy()
 dev_df = dev_df[use_cols].copy()
 

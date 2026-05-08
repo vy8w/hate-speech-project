@@ -1,15 +1,15 @@
-from Korpora import Korpora
 import pandas as pd
 from pathlib import Path
 
 # 저장 폴더 생성
 Path("data/raw").mkdir(parents=True, exist_ok=True)
 
-# 데이터셋 로드
-corpus = Korpora.load("korean_hate_speech")
+# GitHub raw URL에서 직접 읽기
+train_url = "https://raw.githubusercontent.com/kocohub/korean-hate-speech/master/labeled/train.tsv"
+dev_url = "https://raw.githubusercontent.com/kocohub/korean-hate-speech/master/labeled/dev.tsv"
 
-train_df = pd.DataFrame(corpus.train)
-dev_df = pd.DataFrame(corpus.dev)
+train_df = pd.read_csv(train_url, sep="\t")
+dev_df = pd.read_csv(dev_url, sep="\t")
 
 # 원본 저장
 train_df.to_csv("data/raw/train_raw.csv", index=False)

@@ -1,0 +1,5 @@
+﻿stage,model,accuracy,precision,recall,f1
+Baseline,Logistic Regression,0.6583,0.6569,0.8265,0.732
+Baseline,Linear SVM,0.6458,0.667,0.7439,0.7034
+Fine-tuning,KLUE-BERT,0.7814,0.8309,0.7693,0.7989
+LoRA fine-tuning,KLUE-BERT LoRA,0.7838,0.8091,0.8074,0.8083

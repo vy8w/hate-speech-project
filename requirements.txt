@@ -117,3 +117,4 @@ xlrd==2.0.2
 torch
 transformers
 accelerate
+peft
